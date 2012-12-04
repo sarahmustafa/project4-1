@@ -27,7 +27,7 @@
 
 <p>
   <b>Image:</b>
-  <%= image_tag movie.image_url.to_s %>
+  <%= image_tag @movie.image_url.to_s %>
 </p>
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |

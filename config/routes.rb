@@ -1,11 +1,10 @@
 Project4::Application.routes.draw do
-<<<<<<< HEAD
+
   get "navigation/home"
 
   resources :movies
-=======
   resources :bookings
->>>>>>> cf689ec039efc945622cc0d57f2f57fd78a82dc1
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
