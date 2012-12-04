@@ -11,6 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20121202182107) do
 
   create_table "movies", :force => true do |t|
@@ -22,6 +23,19 @@ ActiveRecord::Schema.define(:version => 20121202182107) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "image"
+=======
+ActiveRecord::Schema.define(:version => 20121202080606) do
+
+  create_table "bookings", :force => true do |t|
+    t.integer  "movie_id"
+    t.integer  "showing_id"
+    t.integer  "number_of_seats"
+    t.string   "customer_name"
+    t.string   "phone"
+    t.string   "email"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+>>>>>>> cf689ec039efc945622cc0d57f2f57fd78a82dc1
   end
 
 end
