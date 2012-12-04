@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FactoryGirl.define do
 
 factory :user do
@@ -13,4 +14,13 @@ association :movie
 end
 
 
+=======
+FactoryGirl.define do 
+  factory :booking do 
+    customer_name "Zuhair"
+    phone "66177975"
+    email "zuhair.ghalib@gmail.com"
+    number_of_seats 5
+  end
+>>>>>>> dd6f96aa6c788079a1ea6933ffbd8b3916b205e2
 end

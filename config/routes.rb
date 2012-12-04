@@ -1,4 +1,5 @@
 Project4::Application.routes.draw do
+<<<<<<< HEAD
   resources :showings
 
   match "home" => 'home#index'
@@ -15,6 +16,15 @@ Project4::Application.routes.draw do
     get "log_out" => "session#destroy", :as => "log_out"
     get "sign_up" => "users#new", :as => "sign_up"
     
+=======
+<<<<<<< HEAD
+  get "navigation/home"
+
+  resources :movies
+=======
+  resources :bookings
+>>>>>>> cf689ec039efc945622cc0d57f2f57fd78a82dc1
+>>>>>>> dd6f96aa6c788079a1ea6933ffbd8b3916b205e2
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -65,7 +75,11 @@ Project4::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+<<<<<<< HEAD
    root :to => 'home#index'
+=======
+  root :to => 'navigation#home'
+>>>>>>> dd6f96aa6c788079a1ea6933ffbd8b3916b205e2
 
   # See how all your routes lay out with "rake routes"
 
