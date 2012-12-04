@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
+<div class="container">
 <head>
-  <title>Project4</title>
+  <title>Movie Bookings</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= render 'partials/header'%> 
 </head>
+
+<div class ="span12 offset2">
 <body>
 
 <%= yield %>
 
 </body>
 </html>
+</div></div>
