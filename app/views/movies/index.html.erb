@@ -9,6 +9,7 @@
     <th>Genre</th>
     <th>Rating</th>
     <th>Poster</th>
+    <th>Book</th>
   </tr>
 
 <% @movies.each do |movie| %>
@@ -19,13 +20,15 @@
     <td><%= movie.genre %></td>
     <td><%= movie.rating %></td>
     <td><img src = "<%= movie.image_url%>"></td>
+    <td><%= link_to 'Find show dates', showings_path %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
+<% if !@current_user.nil? && @current_user.admin %>
 <%= link_to 'New Movie', new_movie_path %>
+<% end %>
 </div>
 </section>
 </div>
