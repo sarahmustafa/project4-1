@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :admin,   :only => :destroy
+  #before_filter :admin, :only => [:destroy, :edit, :new]
 
 
     def index
@@ -42,9 +42,9 @@ class UsersController < ApplicationController
         end
       end
 
-      private
-      def admin
-      redirect_to(root_path) unless current_user.admin?
-      end
+     #private
+    # def admin
+     # redirect_to(root_path) unless current_user.admin
+      #end
       
   end

@@ -1,6 +1,8 @@
 Project4::Application.routes.draw do
 
 
+  resources :movies
+
   resources :showings
 
 
@@ -15,9 +17,7 @@ Project4::Application.routes.draw do
     get "log_in" => "session#new", :as => "log_in"
     get "log_out" => "session#destroy", :as => "log_out"
     get "sign_up" => "users#new", :as => "sign_up"
-    
-  resources :movies
-  resources :bookings
+      resources :bookings
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

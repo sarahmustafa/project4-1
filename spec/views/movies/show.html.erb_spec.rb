@@ -5,9 +5,9 @@ describe "movies/show" do
     @movie = assign(:movie, stub_model(Movie,
       :title => "Title",
       :cast => "MyText",
+      :duration => "Duration",
       :genre => "Genre",
-      :rating => "Rating",
-      :duration => "Duration"
+      :rating => "Rating"
     ))
   end
 
@@ -16,8 +16,8 @@ describe "movies/show" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Title/)
     rendered.should match(/MyText/)
+    rendered.should match(/Duration/)
     rendered.should match(/Genre/)
     rendered.should match(/Rating/)
-    rendered.should match(/Duration/)
   end
 end

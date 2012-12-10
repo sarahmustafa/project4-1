@@ -1,4 +1,7 @@
 class ShowingsController < ApplicationController
+
+  before_filter :admin, :only => [:destroy, :edit, :new]
+  
   # GET /showings
   # GET /showings.json
   def index
@@ -80,4 +83,14 @@ class ShowingsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+    private
+    def admin
+    if @current_user.nil?
+      redirect_to(root_url) 
+    else
+      redirect_to(root_url) unless @current_user.is_admin
+    end
+    
+    end
 end

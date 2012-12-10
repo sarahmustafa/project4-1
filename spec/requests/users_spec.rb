@@ -9,9 +9,9 @@ describe "Users" do
       it "should not make a new user" do
         lambda do
           visit new_user_path
-          fill_in "Email",        with: ''
-          fill_in "Password",     with: ''
-          fill_in "Password confirmation", :with => ''
+          fill_in "Email", :with => ""
+          fill_in "Password", :with => ""
+          fill_in "password confirmation", :with => ""
           click_button "Create User"
           current_path.should == users_path
           page.should have_selector('div#error_messages')
@@ -37,7 +37,7 @@ describe "Users" do
     
     describe "failure" do
       it "should not sign a user in" do
-        visit log_in_path
+        visit new_session_path
         fill_in "Email",    :with => ""
         fill_in "Password", :with => ""
         click_button "Log in"
@@ -50,7 +50,7 @@ describe "Users" do
       @user = FactoryGirl.create(:user)
       end
       it "should sign a user in and out" do
-        visit log_in_path
+        visit new_session_path
         fill_in "Email",    :with => @user.email
         fill_in "Password", :with => @user.password
         click_button "Log in"

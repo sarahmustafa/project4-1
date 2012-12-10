@@ -1,13 +1,12 @@
-<h1>Listing movies</h1>
-<section id = "table">
-<table class = "table table-bordered table-striped">
+<h1>Listing all available movies</h1>
 
+<table>
   <tr>
     <th>Title</th>
     <th>Cast</th>
+    <th>Duration</th>
     <th>Genre</th>
     <th>Rating</th>
-    <th>Duration</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,16 +16,16 @@
   <tr>
     <td><%= movie.title %></td>
     <td><%= movie.cast %></td>
+    <td><%= movie.duration %></td>
     <td><%= movie.genre %></td>
     <td><%= movie.rating %></td>
-    <td><%= movie.duration %></td>
     <td><%= link_to 'Show', movie %></td>
     <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
     <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
-</section>
+
 <br />
 
 <%= link_to 'New Movie', new_movie_path %>
