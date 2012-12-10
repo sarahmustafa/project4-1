@@ -70,7 +70,7 @@ describe ShowingsController do
     it "assigns the requested showing as @showing" do
       showing = Showing.create! valid_attributes
       get :edit, {:id => showing.to_param}, valid_session
-      assigns(:showing).should eq(showing)
+     assigns(:showing).should eq(showing)
     end
   end
 
@@ -111,63 +111,5 @@ describe ShowingsController do
     end
   end
 
-  describe "PUT update" do
-    describe "with valid params" do
-      it "updates the requested showing" do
-        showing = Showing.create! valid_attributes
-        # Assuming there are no other showings in the database, this
-        # specifies that the Showing created on the previous line
-        # receives the :update_attributes message with whatever params are
-        # submitted in the request.
-        Showing.any_instance.should_receive(:update_attributes).with({ "movie_id" => "1" })
-        put :update, {:id => showing.to_param, :showing => { "movie_id" => "1" }}, valid_session
-      end
-
-      it "assigns the requested showing as @showing" do
-        showing = Showing.create! valid_attributes
-        put :update, {:id => showing.to_param, :showing => valid_attributes}, valid_session
-        assigns(:showing).should eq(showing)
-      end
-
-      it "redirects to the showing" do
-        showing = Showing.create! valid_attributes
-        put :update, {:id => showing.to_param, :showing => valid_attributes}, valid_session
-        response.should redirect_to(showing)
-      end
-    end
-
-    describe "with invalid params" do
-      it "assigns the showing as @showing" do
-        showing = Showing.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        Showing.any_instance.stub(:save).and_return(false)
-        put :update, {:id => showing.to_param, :showing => { "movie_id" => "invalid value" }}, valid_session
-        assigns(:showing).should eq(showing)
-      end
-
-      it "re-renders the 'edit' template" do
-        showing = Showing.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        Showing.any_instance.stub(:save).and_return(false)
-        put :update, {:id => showing.to_param, :showing => { "movie_id" => "invalid value" }}, valid_session
-        response.should render_template("edit")
-      end
-    end
-  end
-
-  describe "DELETE destroy" do
-    it "destroys the requested showing" do
-      showing = Showing.create! valid_attributes
-      expect {
-        delete :destroy, {:id => showing.to_param}, valid_session
-      }.to change(Showing, :count).by(-1)
-    end
-
-    it "redirects to the showings list" do
-      showing = Showing.create! valid_attributes
-      delete :destroy, {:id => showing.to_param}, valid_session
-      response.should redirect_to(showings_url)
-    end
-  end
-
+ 
 end

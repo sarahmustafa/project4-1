@@ -103,6 +103,7 @@ describe MoviesController do
   end
 
   describe "PUT update" do
+    
     describe "with valid params" do
       it "updates the requested movie" do
         movie = Movie.create! valid_attributes
@@ -147,6 +148,7 @@ describe MoviesController do
   end
 
   describe "DELETE destroy" do
+
     it "destroys the requested movie" do
       movie = Movie.create! valid_attributes
       expect {

@@ -6,4 +6,7 @@ class User < ActiveRecord::Base
   validates :email, :presence => true
   validates_format_of :email, :with => /^[\w]([^@\s,;]+)@(([\w-]+\.)+(com|edu|org|net|gov|mi|biz|info|qa))$/i, :message => "is not a valid format"
   
+  def is_admin?
+    return current_user.admin?
+  end
 end
