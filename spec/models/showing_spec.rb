@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Showing do
    before(:each) do
      @movie = FactoryGirl.create(:movie)
-    @showing = FactoryGirl.create(:showing)
+    @showing = FactoryGirl.create(:showing, :number_of_available_seats => 40)
    end
    
    describe "associations " do 

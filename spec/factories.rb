@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 FactoryGirl.define do
 
 factory :user do
@@ -13,14 +12,18 @@ number_of_available_seats 40
 association :movie
 end
 
-
-=======
-FactoryGirl.define do 
+factory :movie do
+  cast "haya, sarah, zuhair"
+  duration "90 min"
+  genre "Comedy"
+  rating "pge"
+  title "our movie"
+end
+  
   factory :booking do 
     customer_name "Zuhair"
     phone "66177975"
     email "zuhair.ghalib@gmail.com"
     number_of_seats 5
   end
->>>>>>> dd6f96aa6c788079a1ea6933ffbd8b3916b205e2
 end
