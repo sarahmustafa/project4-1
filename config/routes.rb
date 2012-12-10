@@ -2,8 +2,6 @@ Project4::Application.routes.draw do
 
   resources :showings
 
-  match "home" => 'home#index'
-
   get "session/create"
 
   get "session/destroy"
@@ -16,8 +14,6 @@ Project4::Application.routes.draw do
     get "log_out" => "session#destroy", :as => "log_out"
     get "sign_up" => "users#new", :as => "sign_up"
     
-  get "navigation/home"
-
   resources :movies
   resources :bookings
 

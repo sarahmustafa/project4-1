@@ -8,5 +8,5 @@ When I go to the home page
 Then I should not see "You're riding Ruby on Rails!"
 And I should not see "About your application's environment"
 And I should not see "Create your database"
-And I should see "Home" in the "title"
+Then I should see "Home" in the "title"
 

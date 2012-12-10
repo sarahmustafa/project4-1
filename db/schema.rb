@@ -11,10 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20121203175047) do
+
+  create_table "bookings", :force => true do |t|
+    t.integer  "movie_id"
+    t.integer  "showing_id"
+    t.integer  "number_of_seats"
+    t.string   "customer_name"
+    t.string   "phone"
+    t.string   "email"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "movies", :force => true do |t|
+    t.string   "title"
+    t.text     "cast"
+    t.string   "genre"
+    t.string   "rating"
+    t.string   "duration"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "image"
+  end
 
   create_table "showings", :force => true do |t|
     t.integer  "movie_id"
@@ -29,36 +48,6 @@ ActiveRecord::Schema.define(:version => 20121203175047) do
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-=======
-<<<<<<< HEAD
->>>>>>> 415f42c36a5d426dac0a689871fa19ac64b61c52
-ActiveRecord::Schema.define(:version => 20121202182107) do
-
-  create_table "bookings", :force => true do |t|
-    t.integer  "movie_id"
-    t.integer  "showing_id"
-    t.integer  "number_of_seats"
-    t.string   "customer_name"
-    t.string   "phone"
-    t.string   "email"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-<<<<<<< HEAD
-  end
-
-  create_table "movies", :force => true do |t|
-    t.string   "title"
-    t.text     "cast"
-    t.string   "genre"
-    t.string   "rating"
-    t.string   "duration"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "image"
-=======
->>>>>>> cf689ec039efc945622cc0d57f2f57fd78a82dc1
->>>>>>> dd6f96aa6c788079a1ea6933ffbd8b3916b205e2
->>>>>>> 415f42c36a5d426dac0a689871fa19ac64b61c52
   end
 
 end

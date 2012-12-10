@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Showing do
    before(:each) do
-     @movie = FactoryGirl.create(:movie)
+    @movie = FactoryGirl.create(:movie)
     @showing = FactoryGirl.create(:showing)
    end
    
