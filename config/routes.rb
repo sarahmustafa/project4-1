@@ -6,12 +6,6 @@ Project4::Application.routes.draw do
   resources :showings
 
 
-  get "session/create"
-
-  get "session/destroy"
-
-  get "session/new"
-  get "user/new"
   resources :users
   resources :session, only: [:new, :create, :destroy]
     get "log_in" => "session#new", :as => "log_in"
