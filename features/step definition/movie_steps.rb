@@ -18,9 +18,3 @@ Given /^I am on the 'movies' page$/ do
   visit movies_path
 end
 
-Then /^in the "(.*?)", I should see "(.*?)"$/ do |arg1, arg2|
-  page.should have_css(arg1, :text => arg2)
-end
-
-
-
