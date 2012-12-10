@@ -12,5 +12,3 @@ Scenario: valid_new_movie
 	And I type "Thriller" for "Genre"
 	And I type "145 mins" for "Duration"
 	And I click on the button "Create Movie"
-	Then I should see the message "Movie was successfully created."
-	

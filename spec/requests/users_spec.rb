@@ -9,9 +9,9 @@ describe "Users" do
       it "should not make a new user" do
         lambda do
           visit new_user_path
-          fill_in "Email",        :with => ""
-         # fill_in "Password",     :with => ""
-          fill_in "Password confirmation", :with => ""
+          fill_in "Email",        with: ''
+          fill_in "Password",     with: ''
+          fill_in "Password confirmation", :with => ''
           click_button "Create User"
           current_path.should == users_path
           page.should have_selector('div#error_messages')

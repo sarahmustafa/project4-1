@@ -2,25 +2,18 @@
 <html>
 <div class="container">
 <head>
-  <div class = "container">
-<div class = "row">
-  <title>Ticket Booking</title>
+  <title>Movie Bookings</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= render 'partials/header'%> 
- 
 </head>
+
+<div class ="span12 offset2">
 <body>
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, :id => "flash#{name}" %>
-    <% end %>
 
 <%= yield %>
 
-
 </body>
-</div></div></div>
 </html>
-
 </div></div>
