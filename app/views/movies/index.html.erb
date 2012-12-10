@@ -8,9 +8,7 @@
     <th>Duration</th>
     <th>Genre</th>
     <th>Rating</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Poster</th>
   </tr>
 
 <% @movies.each do |movie| %>
@@ -20,9 +18,7 @@
     <td><%= movie.duration %></td>
     <td><%= movie.genre %></td>
     <td><%= movie.rating %></td>
-    <td><%= link_to 'Show', movie %></td>
-    <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
-    <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><img src = "<%= movie.image_url%>"></td>
   </tr>
 <% end %>
 </table>
