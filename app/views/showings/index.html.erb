@@ -1,6 +1,7 @@
 <title>Listing Showings</title>
 
-<table>
+<section id = "table">
+<table class = "table table-bordered table-striped">
   <tr>
     <th>Movie</th>
     <th>Showing Time</th>
@@ -15,15 +16,17 @@
     <td><%= showing.movie_id %></td>
     <td><%= showing.showing_time %></td>
     <td><%= showing.number_of_available_seats %></td>
+    <% if !@current_user.nil? && @current_user.admin %>
     <td><%= link_to 'Show', showing %></td>
     <td><%= link_to 'Edit', edit_showing_path(showing) %></td>
-    <td><%= link_to 'Destroy', showing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', showing, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% else %>
+    <td><%= link_to 'Make a booking', new_bookings_path %></td>
+    <% end%>
+    </td>
   </tr>
 <% end %>
 </table>
-
+</section>
 <br />
 
-<% if !@current_user.nil? && @current_user.admin %>
-<%= link_to 'New Showing', new_showing_path %>
-<% end %>

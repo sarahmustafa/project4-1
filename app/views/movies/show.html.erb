@@ -11,6 +11,11 @@
 </p>
 
 <p>
+  <b>Duration:</b>
+  <%= @movie.duration %>
+</p>
+
+<p>
   <b>Genre:</b>
   <%= @movie.genre %>
 </p>
@@ -21,14 +26,10 @@
 </p>
 
 <p>
-  <b>Duration:</b>
-  <%= @movie.duration %>
-</p>
-
-<p>
   <b>Image:</b>
   <%= image_tag @movie.image_url.to_s %>
 </p>
+
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>

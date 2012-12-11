@@ -1,19 +1,17 @@
 Project4::Application.routes.draw do
+
+
+  resources :movies
+
   resources :showings
 
-  #match "home" => 'home#index'
 
   resources :users
   resources :session, only: [:new, :create, :destroy]
     get "log_in" => "session#new", :as => "log_in"
     get "log_out" => "session#destroy", :as => "log_out"
     get "sign_up" => "users#new", :as => "sign_up"
-    
-
-  get "navigation/home"
-
-  resources :movies
-  resources :bookings
+      resources :bookings
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -64,9 +62,7 @@ Project4::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-
-  root :to => 'home#index'
-
+   root :to => 'home#index'
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

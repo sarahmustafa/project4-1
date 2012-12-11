@@ -1,7 +1,6 @@
 <h1>Listing bookings</h1>
-
-<table>
-  <tr>
+<section id = "table">
+<table class = "table table-bordered table-striped">
     <th>Movie</th>
     <th>Showing</th>
     <th>Number of seats</th>
@@ -21,9 +20,12 @@
     <td><%= booking.customer_name %></td>
     <td><%= booking.phone %></td>
     <td><%= booking.email %></td>
+    <% if !@current_user.nil?%>
     <td><%= link_to 'Show', booking %></td>
     <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
-    <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+    </td>
   </tr>
 <% end %>
 </table>
@@ -31,3 +33,7 @@
 <br />
 
 <%= link_to 'New Booking', new_booking_path %>
+<>
+</div>
+</section>
+</div>

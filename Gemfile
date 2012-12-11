@@ -33,9 +33,6 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem "cucumber-rails"
-  gem "capybara"
-  gem "database_cleaner"
-  gem "launchy"
   gem "shoulda-matchers"
   
 end

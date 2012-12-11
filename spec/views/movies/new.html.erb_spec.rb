@@ -5,9 +5,9 @@ describe "movies/new" do
     assign(:movie, stub_model(Movie,
       :title => "MyString",
       :cast => "MyText",
+      :duration => "MyString",
       :genre => "MyString",
-      :rating => "MyString",
-      :duration => "MyString"
+      :rating => "MyString"
     ).as_new_record)
   end
 
@@ -18,9 +18,9 @@ describe "movies/new" do
     assert_select "form", :action => movies_path, :method => "post" do
       assert_select "input#movie_title", :name => "movie[title]"
       assert_select "textarea#movie_cast", :name => "movie[cast]"
+      assert_select "input#movie_duration", :name => "movie[duration]"
       assert_select "input#movie_genre", :name => "movie[genre]"
       assert_select "input#movie_rating", :name => "movie[rating]"
-      assert_select "input#movie_duration", :name => "movie[duration]"
     end
   end
 end

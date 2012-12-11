@@ -1,12 +1,9 @@
 <div class ="container">
   <div class="row">
-   <div class="span2">
-      <img src=' /assets/video.png'> 
+   <div class="span12">
+      <img src=' /assets/capture.png'>
     </div>
-    <div class="span4">
-      <h1>QMovies</h1> 
-      <p class="lead">All your movies needs in one place</p>
-    </div>   
+  
 <div>
   <div class="row">
     <div class="span12">
@@ -25,10 +22,21 @@
             <li><a href="<%= movies_path %>">Movie Listings</a></li>
           </ul>
        </div><!-- /.nav-collapse -->
+       <ul class="nav pull-right">
+          <% if current_user %>
+          Logged in as <%= current_user.email %>
+          <li><a href="<%= log_out_path %>">Log Out</a></li>
+        <% else %>
+        <li><a href="<%= sign_up_path %>">Sign Up</a></li>
+        <li><a href="<%= log_in_path %>">Log In</a></li>
+        
+        <% end %>
+      </ul>
       </div>
     </div><!-- /navbar-inner -->
   </div><!-- /navbar -->
+
 </div>
 </section>
+
 </div>
-</div></div></div></div>

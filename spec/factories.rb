@@ -12,18 +12,20 @@ number_of_available_seats 40
 association :movie
 end
 
-factory :movie do
-  cast "haya, sarah, zuhair"
-  duration "90 min"
-  genre "Comedy"
-  rating "pge"
-  title "our movie"
+
+factory :booking do 
+customer_name "Zuhair"
+phone "66177975"
+email "zuhair.ghalib@gmail.com"
+number_of_seats 5
 end
-  
-  factory :booking do 
-    customer_name "Zuhair"
-    phone "66177975"
-    email "zuhair.ghalib@gmail.com"
-    number_of_seats 5
-  end
+
+factory :movie do
+cast "Brad Pitt, Edward Norton, Jared Leto"
+duration "139 mins"
+genre "Thriller"
+rating "R"
+title "Fight Club"
+end
+
 end
