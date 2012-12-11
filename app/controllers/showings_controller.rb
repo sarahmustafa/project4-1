@@ -1,6 +1,6 @@
 class ShowingsController < ApplicationController
 
-  before_filter :admin, :only => [:destroy, :edit, :new]
+  #before_filter :admin, :only => [:destroy, :edit, :new]
   
   # GET /showings
   # GET /showings.json
